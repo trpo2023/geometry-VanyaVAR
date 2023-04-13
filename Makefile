@@ -1,24 +1,21 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror
-OBJ = main.o hello.o
+CFLAGS = -Wall -Werror
+OBJ = geometry.o
 
-all: obj hello
+all: obj geometry
 
-obj: main.o hello.o
+obj: geometry.o
 
-main.o: main.c
-	$(CC) $(CFLAGS) main.c -c
+geometry.o: geometry.c
+	$(CC) $(CFLAGS) geometry.c -c
 
-hello.o: hello.c
-	$(CC) $(CFLAGS) hello.c -c
-
-hello: main.o hello.o
-	$(CC) $(CFLAGS) $(OBJ) -o hello
+geometry: geometry.o
+	$(CC) $(CFLAGS) $(OBJ) -o geometry
 
 clean:
 	rm $(OBJ)
 
 fclean: clean
-	rm hello
+	rm geometry
 
 .PHONY: all clean fclean obj
