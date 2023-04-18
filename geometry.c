@@ -1,4 +1,4 @@
-#include <ctype.h>
+3cb8a237e6d4b8cdd1b42f18d93c210a7d697e62#include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -113,7 +113,7 @@ int isEnd(char* str)
             firstBracket = i;
             break;
         }
-    }
+    }3cb8a237e6d4b8cdd1b42f18d93c210a7d697e62
     if (firstBracket == endingSymbol)
         ret = 0;
     return ret;
@@ -189,7 +189,7 @@ int main()
     file = fopen("test.txt", "r");
     if (fopen("test.txt", "r") == NULL) {
         printf("File not found\n");
-        exit(0);
+        exit(0);3cb8a237e6d4b8cdd1b42f18d93c210a7d697e62
     }
     char str1[100];
     int countObj = 0;
